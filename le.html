@@ -10,6 +10,7 @@
     <textarea id="your_id" cols="30" rows="10" placeholder="Your ID"></textarea>
     <textarea id="other_id" cols="30" rows="10" placeholder="Other ID"></textarea>
     <button id="connect">Connect</button>
+
     <textarea id="yourMessage" cols="30" rows="10" placeholder="Message"></textarea>
     <button id="send">Send</button>
     <pre id="message"></pre>
@@ -20,7 +21,7 @@
             var media = await navigator.mediaDevices.getUserMedia({video: true, audio: true});
             var Peer = require('simple-peer')
             var peer = new Peer({
-                initiator: location.hash === "#init",
+                initiator: location.hash === "",
                 trickle: false,
                 stream: media
             })
